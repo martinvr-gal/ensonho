@@ -27,6 +27,11 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+/backend/data/*.db
+/backend/.venv/
+/backend/.pytest_cache/
+/backend/**/__pycache__/
+*.py[cod]
 
 # vercel
 .vercel

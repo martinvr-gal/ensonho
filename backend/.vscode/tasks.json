@@ -1,0 +1,20 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Test Instagram import persistence",
+			"type": "shell",
+			"command": "D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"pytest",
+				"tests/test_api.py",
+				"-k",
+				"instagram_import_persists",
+				"-q"
+			],
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}

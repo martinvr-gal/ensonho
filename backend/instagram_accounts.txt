@@ -1,0 +1,12 @@
+# Instagram accounts to import house listings from
+# One username per line (without @ symbol)
+# Lines starting with # are comments
+
+# Default accounts (5 accounts x 10 posts each = 50 posts)
+micasajapon
+oldhousesjapan
+omoroiosaka
+japanhousedeal
+akiyajourney.japan
+
+# Add or replace with your own accounts below:

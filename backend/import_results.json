@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-11-12T13:31:30.849740+00:00",
+  "dry_run": false,
+  "total_accounts": 5,
+  "total_posts_requested": 50,
+  "accounts": [
+    {
+      "account_id": "17841433390145210",
+      "username": "micasajapon",
+      "total_imported": 10,
+      "total_images": 138,
+      "status": "success",
+      "errors": [],
+      "timestamp": "2026-11-12T13:34:47.310969+00:00"
+    },
+    {
+      "account_id": "17841433390145210",
+      "username": "oldhousesjapan",
+      "total_imported": 10,
+      "total_images": 95,
+      "status": "success",
+      "errors": [],
+      "timestamp": "2026-11-12T13:37:31.435596+00:00"
+    },
+    {
+      "account_id": "17841433390145210",
+      "username": "omoroiosaka",
+      "total_imported": 10,
+      "total_images": 99,
+      "status": "success",
+      "errors": [],
+      "timestamp": "2026-11-12T13:40:24.290071+00:00"
+    },
+    {
+      "account_id": "17841433390145210",
+      "username": "japanhousedeal",
+      "total_imported": 10,
+      "total_images": 89,
+      "status": "success",
+      "errors": [],
+      "timestamp": "2026-11-12T13:42:29.167567+00:00"
+    },
+    {
+      "account_id": "17841433390145210",
+      "username": "akiyajourney.japan",
+      "total_imported": 10,
+      "total_images": 155,
+      "status": "success",
+      "errors": [],
+      "timestamp": "2026-11-12T13:46:29.498997+00:00"
+    }
+  ],
+  "summary": {
+    "total_posts_imported": 50,
+    "total_images_stored": 576,
+    "accounts_failed": 0,
+    "accounts_partial": 0,
+    "accounts_success": 5
+  }
+}

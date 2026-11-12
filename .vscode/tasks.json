@@ -1,0 +1,292 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Test Instagram import persistence",
+			"type": "shell",
+			"command": "D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"pytest",
+				"backend/tests/test_api.py",
+				"-k",
+				"instagram_import_persists",
+				"-q"
+			],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Test Instagram import persistence",
+			"type": "shell",
+			"command": "Set-Location 'D:\\Proxectos\\ensonho\\backend'; & 'D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe' -m pytest tests/test_api.py -k instagram_import_persists -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Focused Instagram persistence pytest backend",
+			"type": "shell",
+			"command": "D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k instagram_import_persists -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Run Instagram persistence test from backend cwd",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k instagram_import_persists -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Run full backend pytest from backend cwd",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Instagram live read-only preview",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -c \"from app.config import get_settings; from app.schemas import InstagramImportRequest; from app.service import InstagramImportService; service=InstagramImportService(); account_id,drafts=service.import_posts(InstagramImportRequest(account_id=None,limit=3,dry_run=True),user_id='read-only-preview'); print('ACCOUNT_ID=',account_id); print('POST_COUNT=',len(drafts)); [print('POST=',d.source_post_id,'|',d.title,'|',d.media_type) for d in drafts]\"",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Instagram live read-only preview script",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_preview_check.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Verify Instagram import regression after usernames",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k instagram -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Verify Instagram Business Discovery batch test",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k business_discovery -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Verify Business Discovery usernames in drafts",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k business_discovery -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Live read-only preview five Instagram accounts",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_business_discovery_check.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Run full backend suite after Business Discovery support",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Retry live Instagram Business Discovery preview",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_business_discovery_check.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Instagram token permissions safely",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_business_discovery_check.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Final full backend tests after Instagram account usernames",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Meta access token status without printing it",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_token_status.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Preview five external Instagram accounts with refreshed token",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_token_status.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Persist 50 Instagram drafts to Supabase",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_token_status.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Validate UUID import mapping and Business Discovery",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k \"uuid_columns or business_discovery or persists_pending\" -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Validate UUID import mapping and Business Discovery retry",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k 'uuid_columns or business_discovery or persists_pending' -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Persist verified Instagram drafts to Supabase retry",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_token_status.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Final backend test suite after Supabase import",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check imported Instagram media availability",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_media_availability_check.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Supabase Storage prerequisites safely",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe storage_prereq_check.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Validate UUID schema for imported media table",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k uuid_columns -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Test Supabase image storage and carousel import",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k 'persists_pending or supabase_storage' -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Retry Supabase image storage tests after model fix",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k 'persists_pending or supabase_storage' -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Retry private storage import idempotence tests",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k 'persists_pending or supabase_storage' -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Validate image storage RLS and UUID mapping",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k 'uuid_columns or persists_pending or supabase_storage' -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Verify private image storage and carousel flow",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests/test_api.py -k 'persists_pending or supabase_storage' -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Final tests for private Instagram image storage",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Storage setup safely before upload",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe storage_prereq_check.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Upload one Instagram post image to private Storage",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_storage_smoke_test.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Count images before full Instagram upload",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe instagram_storage_preview_count.py",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Final tests for private image persistence",
+			"type": "shell",
+			"command": "Set-Location D:\\Proxectos\\ensonho\\backend; & D:\\Proxectos\\ensonho\\.venv\\Scripts\\python.exe -m pytest tests -q",
+			"args": [],
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}
